@@ -124,7 +124,7 @@ class Luscher_zeta(object):
         gvinv = np.array([1.0/gamma, 1.0, 1.0])
 
         r2_list = np.sum(((self.r_vec[:,:] + 0.5*np.array(self.d))*gvinv)**2, axis=1)
-     
+        
         r2_small = r2_list[r2_list < self.lcut**2]
         r2_large = r2_list[r2_list >= self.lcut**2]
         
